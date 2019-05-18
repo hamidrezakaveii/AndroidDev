@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bienvenue</string>
+    <string name="action_settings">Settings</string>
+    <string name="lblNom">Nom</string>
+    <string name="lblSalaire">Salaire</string>
+    <string name="lblAugmenter">Augmenter</string>
+    <string name="lblBienvineu">Bienvenu</string>
+    <string name="lblNeveuSalaire">Neuveu Salaire</string>
+    <string name="hintNom">Votre nom</string>
+    <string name="hintSalaire">Votre Salaire</string>
+</resources>

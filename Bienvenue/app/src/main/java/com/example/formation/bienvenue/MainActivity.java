@@ -42,7 +42,15 @@ public class MainActivity extends AppCompatActivity {
         btnAugmenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Changement", Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this, "Changement", Toast.LENGTH_LONG).show();
+                //calcul de salaire
+                String nom = txtNom.getText().toString();
+                txtResulatNom.setText(nom);
+
+                double salaire = Double.parseDouble(txtSalaire.getText().toString());
+                salaire += 500;
+                txtResulatSalaire.setText(String.valueOf(salaire));
+
             }
         });
     }

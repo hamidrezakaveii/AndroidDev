@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="action_settings">Settings</string>
+    <string name="brnMetrique">Metrique</string>
+    <string name="brnImperial">Imperial</string>
+    <string name="txtPois">Poids</string>
+    <string name="txtMusure">Musure</string>
+    <string name="btnEffacer">Effacer</string>
+    <string name="btnCalculer">Calculer</string>
+    <string name="txtPoids">Poids</string>
+    <string name="txtIMC">IMC</string>
+    <string name="txtClasse">Classe</string>
+    <string name="txtRisque">Risque</string>
+    <string name="txtTaille">Taille</string>
+    <string name="altTailleMouvais">Saisir une valuer de taille valide</string>
+    <string name="altPoidsMouvais">Saisir une valuer de poids valide</string>
+    <string name="altTitreErrour">Errour</string>
+</resources>

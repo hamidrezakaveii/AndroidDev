@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="classification">
+    <item>Poids insuffisant</item>
+    <item>Poids normal</item>
+    <item>Exces de poids</item>
+    <item>Obéstité de poids</item>
+    <item>Obéstité classe I</item>
+    <item>Obéstité classe II</item>
+    <item>Obéstité classe III</item>
+    </array>
+
+
+
+    <array name="risque">
+        <item>Accru</item>
+        <item>Moindre</item>
+        <item>Accru</item>
+        <item>Élevé</item>
+        <item>Trés Élevé</item>
+        <item>Extrément élevé</item>
+    </array>
+
+</resources>

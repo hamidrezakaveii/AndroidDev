@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RadioButton rbnChoixDeSandwich;
     private CheckBox chkMayonnaise;
     private CheckBox chkKetchup;
-    private String ChoixMayonnaise;
-    private String ChoixKetchup;
+    private String ChoixOptions;
     private String ChoixDeSandwich;
+
 
 
     @Override
@@ -50,10 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rbgChoixDeSandwich = findViewById(R.id.rbgChoixDeSandwitch);
         chkMayonnaise = findViewById(R.id.chkMayounaise);
         chkKetchup = findViewById(R.id.chkKetchup);
-        rbnChoixDeSandwich = findViewById(R.id.(rbgChoixDeSandwich.getCheckedRadioButtonId()));
-        if(chkMayonnaise.isSelected()){ ChoixMayonnaise = chkMayonnaise.getText().toString();};
-        if(chkKetchup.isSelected()){ ChoixKetchup = chkKetchup.getText().toString();};
-        ChoixDeSandwich = rbnChoixDeSandwich.getText().toString();
+
 
     }
 
@@ -67,6 +64,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        });
 
         //3.Third way for assign the listener
+
+        int idd = rbgChoixDeSandwich.getCheckedRadioButtonId();
+        rbnChoixDeSandwich = findViewById(idd);
+        if(chkMayonnaise.isSelected()){ ChoixOptions += chkMayonnaise.getText().toString();};
+        if(chkKetchup.isSelected()){ ChoixOptions += chkKetchup.getText().toString();};
+        ChoixDeSandwich = rbnChoixDeSandwich.getText().toString();
         btnCommander.setOnClickListener(this);
 
     }
@@ -100,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v.getId() == R.id.btnCommander){
             //Toast.makeText(MainActivity.this, "Sandwich", Toast.LENGTH_LONG).show();
-            Toast.makeText(MainActivity.this, ChoixDeSandwich + " " + ChoixMayonnaise + " " + chkKetchup , Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, ChoixDeSandwich + " " + ChoixOptions  , Toast.LENGTH_LONG).show();
         }
     }
 

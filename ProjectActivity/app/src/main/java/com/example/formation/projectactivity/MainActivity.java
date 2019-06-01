@@ -1,5 +1,6 @@
 package com.example.formation.projectactivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,40 +11,38 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText txtNom;
     private Button btnChanger;
-    private static int compteur = 0;
+    private Intent monIntent;
+    //private static int compteur = 0;
+    private TextView lblNom;
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        compteur++;
-        Toast.makeText(MainActivity.this, "Computer:-onRestart"+compteur, Toast.LENGTH_LONG).show();
+//        compteur++;
+//        Toast.makeText(MainActivity.this, "Computer:-onRestart"+compteur, Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        compteur++;
-        Toast.makeText(MainActivity.this, "Computer:-onPause"+compteur, Toast.LENGTH_LONG).show();
+//        compteur++;
+//        Toast.makeText(MainActivity.this, "Computer:-onPause"+compteur, Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        compteur++;
-        Toast.makeText(MainActivity.this, "Computer-onResume:"+compteur, Toast.LENGTH_LONG).show();
+//        compteur++;
+//        Toast.makeText(MainActivity.this, "Computer-onResume:"+compteur, Toast.LENGTH_LONG).show();
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onResume();
-        compteur++;
-        Toast.makeText(MainActivity.this, "Computer-onDestroy:"+compteur, Toast.LENGTH_LONG).show();
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,11 +59,12 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        compteur ++;
+        //compteur ++;
         setWidgets();
         setListener();
 
-        Toast.makeText(MainActivity.this, "Computer-onCreate:"+compteur, Toast.LENGTH_LONG).show();
+
+//        Toast.makeText(MainActivity.this, "Computer-onCreate:"+compteur, Toast.LENGTH_LONG).show();
 
     }
 
@@ -72,14 +72,20 @@ public class MainActivity extends AppCompatActivity {
         btnChanger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                //finish();
+                monIntent = new Intent(MainActivity.this, DestinationActivity.class);
+
+                monIntent.putExtra("monNom", txtNom.getText().toString());
+                startActivity(monIntent);
             }
         });
+
     }
 
     private void setWidgets() {
         txtNom = findViewById(R.id.txtNom);
         btnChanger = findViewById(R.id.btnChanger);
+
     }
 
     @Override

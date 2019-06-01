@@ -8,8 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private Button btnCommander;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,30 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        setWidgets();
+        setListener();
     }
+
+    private void setWidgets() {
+        btnCommander = findViewById(R.id.btnCommander);
+    }
+
+    private void setListener() {
+        //2.Second way for asign the listener
+//        btnCommander.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(MainActivity.this, "Sandwich", Toast.LENGTH_LONG).show();
+//            }
+//        });
+
+        //3.Third way for assign the listener
+        btnCommander.setOnClickListener(this);
+
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -49,4 +75,18 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    //3.Third way for add the listener
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.btnCommander){
+            Toast.makeText(MainActivity.this, "Sandwich", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    //1.Frist way for add the listener
+//    public void onCommander(View view) {
+//
+//        Toast.makeText(MainActivity.this, "Sandwich", Toast.LENGTH_LONG).show();
+//    }
 }

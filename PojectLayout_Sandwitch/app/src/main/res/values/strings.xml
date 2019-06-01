@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PojectLayout_Sandwitch</string>
+    <string name="action_settings">Settings</string>
+    <string name="vegeterian">Vegeterian</string>
+    <string name="mayonnaise">Mayonnaise</string>
+    <string name="choix_de_sandwitch">Choix de sandwitch</string>
+    <string name="options_pour_votre_sandwitch">Options pour votre sandwitch</string>
+    <string name="commander">Commander</string>
+    <string name="ketchup">Ketchup</string>
+    <string name="viande_blanche">Viande Blanche</string>
+    <string name="viande_rouge">Viande Rouge</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/choix_de_sandwitch"
+            android:textColor="@android:color/background_light" />
+
+        <RadioGroup
+            android:id="@+id/rbgChoixDeSandwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbnVegeterian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/vegeterian" />
+
+            <RadioButton
+                android:id="@+id/rbnViandeRouge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/viande_rouge" />
+
+            <RadioButton
+                android:id="@+id/rbnViandeBlanche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/viande_blanche" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/options_pour_votre_sandwitch"
+            android:textColor="@android:color/background_light" />
+
+        <CheckBox
+            android:id="@+id/chkMayounaise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mayonnaise" />
+
+        <CheckBox
+            android:id="@+id/chkKetchup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ketchup" />
+
+        <Button
+            android:id="@+id/btnCommander"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/commander" />
+    </LinearLayout>
+</LinearLayout>

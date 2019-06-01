@@ -9,10 +9,21 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnCommander;
+    private RadioGroup rbgChoixDeSandwich;
+    private RadioButton rbnChoixDeSandwich;
+    private CheckBox chkMayonnaise;
+    private CheckBox chkKetchup;
+    private String ChoixMayonnaise;
+    private String ChoixKetchup;
+    private String ChoixDeSandwich;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +47,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void setWidgets() {
         btnCommander = findViewById(R.id.btnCommander);
+        rbgChoixDeSandwich = findViewById(R.id.rbgChoixDeSandwitch);
+        chkMayonnaise = findViewById(R.id.chkMayounaise);
+        chkKetchup = findViewById(R.id.chkKetchup);
+        rbnChoixDeSandwich = findViewById(R.id.(rbgChoixDeSandwich.getCheckedRadioButtonId()));
+        if(chkMayonnaise.isSelected()){ ChoixMayonnaise = chkMayonnaise.getText().toString();};
+        if(chkKetchup.isSelected()){ ChoixKetchup = chkKetchup.getText().toString();};
+        ChoixDeSandwich = rbnChoixDeSandwich.getText().toString();
+
     }
 
     private void setListener() {
@@ -80,7 +99,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btnCommander){
-            Toast.makeText(MainActivity.this, "Sandwich", Toast.LENGTH_LONG).show();
+            //Toast.makeText(MainActivity.this, "Sandwich", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, ChoixDeSandwich + " " + ChoixMayonnaise + " " + chkKetchup , Toast.LENGTH_LONG).show();
         }
     }
 

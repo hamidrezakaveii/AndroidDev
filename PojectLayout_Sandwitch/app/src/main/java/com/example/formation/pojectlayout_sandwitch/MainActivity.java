@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         chkKetchup = findViewById(R.id.chkKetchup);
 
 
+
+
+
     }
 
     private void setListener() {
@@ -64,12 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        });
 
         //3.Third way for assign the listener
-
-        int idd = rbgChoixDeSandwich.getCheckedRadioButtonId();
-        rbnChoixDeSandwich = findViewById(idd);
-        if(chkMayonnaise.isSelected()){ ChoixOptions += chkMayonnaise.getText().toString();};
-        if(chkKetchup.isSelected()){ ChoixOptions += chkKetchup.getText().toString();};
-        ChoixDeSandwich = rbnChoixDeSandwich.getText().toString();
         btnCommander.setOnClickListener(this);
 
     }
@@ -103,7 +100,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v.getId() == R.id.btnCommander){
             //Toast.makeText(MainActivity.this, "Sandwich", Toast.LENGTH_LONG).show();
-            Toast.makeText(MainActivity.this, ChoixDeSandwich + " " + ChoixOptions  , Toast.LENGTH_LONG).show();
+            //Toast.makeText(MainActivity.this, ChoixDeSandwich + " " + ChoixOptions  , Toast.LENGTH_LONG).show();
+            int idd = rbgChoixDeSandwich.getCheckedRadioButtonId();
+            rbnChoixDeSandwich = findViewById(idd);
+
+            if(chkMayonnaise.isChecked()){
+                ChoixOptions += chkMayonnaise.getText().toString();
+            }
+            if(chkKetchup.isChecked()){
+                ChoixOptions += chkKetchup.getText().toString();
+            }
+
+            ChoixDeSandwich = rbnChoixDeSandwich.getText().toString();
+
+
+            Toast.makeText(MainActivity.this, ChoixDeSandwich + "-" + ChoixOptions  , Toast.LENGTH_LONG).show();
         }
     }
 

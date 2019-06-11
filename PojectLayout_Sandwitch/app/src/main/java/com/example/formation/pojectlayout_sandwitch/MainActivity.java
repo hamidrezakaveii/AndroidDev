@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RadioButton rbnChoixDeSandwich;
     private CheckBox chkMayonnaise;
     private CheckBox chkKetchup;
-    private String ChoixOptions;
-    private String ChoixDeSandwich;
+    private String ChoixOptions = "";
+    private String ChoixDeSandwich = "";
 
 
 
@@ -101,8 +101,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v.getId() == R.id.btnCommander){
             //Toast.makeText(MainActivity.this, "Sandwich", Toast.LENGTH_LONG).show();
             //Toast.makeText(MainActivity.this, ChoixDeSandwich + " " + ChoixOptions  , Toast.LENGTH_LONG).show();
-            int idd = rbgChoixDeSandwich.getCheckedRadioButtonId();
-            rbnChoixDeSandwich = findViewById(idd);
+
+            ChoixDeSandwich = "";
+            ChoixOptions = "";
+
+            int checkedRadioButtonId = rbgChoixDeSandwich.getCheckedRadioButtonId();
+            rbnChoixDeSandwich = findViewById(checkedRadioButtonId);
 
             if(chkMayonnaise.isChecked()){
                 ChoixOptions += chkMayonnaise.getText().toString();

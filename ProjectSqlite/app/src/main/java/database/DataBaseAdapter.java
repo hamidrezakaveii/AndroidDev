@@ -1,10 +1,14 @@
-package com.example.formation.projectsqlite;
+package database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+
+import model.Personne;
 
 public class DataBaseAdapter {
 
@@ -29,17 +33,25 @@ public class DataBaseAdapter {
         this.database.insert(DatabaseHelper.TABLE_1, null, cv);
     }
 
-    public void selectionerData(){
+    public ArrayList<Personne> selectionerData(){
         //colonne a ramoner
         String [] cols = {DatabaseHelper.ID, DatabaseHelper.NOM};
+        ArrayList<Personne> list = new ArrayList<>();
         //cursor
         Cursor cursor = this.database.query(DatabaseHelper.TABLE_1, cols, null, null, null, null, null);
         //parcorir le cursor
         while(cursor.moveToNext()){
+
             int index = cursor.getColumnIndex(DatabaseHelper.NOM);
             String nom = cursor.getString(index);
-            Toast.makeText(context, nom, Toast.LENGTH_LONG).show();
+
+            index = cursor.getColumnIndex(DatabaseHelper.ID);
+            int id = cursor.getInt(index);
+
+            //Toast.makeText(context, nom, Toast.LENGTH_LONG).show();
+            list.add(new Personne(id, nom));
         }
+        return list;
     }
 
     public void close() {

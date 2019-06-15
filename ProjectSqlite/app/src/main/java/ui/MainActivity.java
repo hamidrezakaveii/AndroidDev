@@ -1,4 +1,4 @@
-package com.example.formation.projectsqlite;
+package ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.formation.projectsqlite.R;
+
+import database.DataBaseAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnSave;

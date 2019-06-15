@@ -1,5 +1,6 @@
 package com.example.formation.projectsqlite;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -52,9 +53,12 @@ public class MainActivity extends AppCompatActivity {
         btnRead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbAdapter = new DataBaseAdapter(MainActivity.this);
-                dbAdapter.openDatabase();
-                dbAdapter.selectionerData();
+                //dbAdapter = new DataBaseAdapter(MainActivity.this);
+                //dbAdapter.openDatabase();
+                //dbAdapter.selectionerData();
+                Intent monIntent = new Intent(MainActivity.this, ListingActivity.class);
+                startActivity(monIntent);
+
             }
         });
     }

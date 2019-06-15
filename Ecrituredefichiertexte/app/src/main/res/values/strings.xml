@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Ecriture de fichier texte</string>
     <string name="action_settings">Settings</string>
+    <string name="Sortir">Sortir</string>
+    <string name="Lecteur">Lecteur</string>
+    <string name="Sauvgarder">Sauvgarder</string>
+    <string name="Policy">Policy</string>
 </resources>

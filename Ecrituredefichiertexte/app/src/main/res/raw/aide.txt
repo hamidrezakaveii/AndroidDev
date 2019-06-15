@@ -1,0 +1,20 @@
+Aide IMC
+		IMC vous permet de suivre votre indice de masse corporel toute l'année.
+		Pour commencer à utiliser IMC santé, vous allez prendre vos mesures poids et taille.
+		IMC santé est capable de faire le calcul en prenant des valeurs en mesure métrique ou impériale.
+
+	Calcul
+		Saisir votre poids et taille et cliquer sur le bouton radio correspondant au type de mesure.
+		Appuyer sur le bouton -Calculer- pour obtenir votre IMC.
+		Appuyer sur le bouton -Effacer- pour effacer le formulaire.
+
+	Suivi
+	 	Utiliser les onglets -Courant- et -évolution- pour suivre l'évolution de votre IMC.
+
+	Préférences
+
+			Saisir votre taille moyenne, ainsi que votre nom et	prénom pour personnaliser les graphiques.
+
+    	Aide
+    		Appuyer sur la sélection -Aide- pour avoir une aide	sur IMC santé
+

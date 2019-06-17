@@ -57,9 +57,11 @@ public class MainActivity extends AppCompatActivity {
         btnRead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //In the MainActivity
                 //dbAdapter = new DataBaseAdapter(MainActivity.this);
                 //dbAdapter.openDatabase();
                 //dbAdapter.selectionerData();
+                //In the ListingActivity
                 Intent monIntent = new Intent(MainActivity.this, ListingActivity.class);
                 startActivity(monIntent);
 

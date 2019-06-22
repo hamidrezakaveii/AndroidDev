@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">projet_internationalisation</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_friends">Bienvenu potes!</string>
+    <string name="name">Nom</string>
+    <string name="height">Taille</string>
+    <string name="email">Boite Email</string>
+</resources>

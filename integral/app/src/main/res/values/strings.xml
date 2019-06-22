@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">integral</string>
+    <string name="action_settings">Settings</string>
+    <string name="ajouter">ajouter</string>
+    <string name="choix_produit">Choix de Produit</string>
+    <string name="ok">Accepter</string>
+    <string name="annuler">Annuler</string>
+    <string name="Annuler">annuler</string>
+    <string name="saisir_choix_produit">Coisir une categorie de produit</string>
+    <string name="Annulation">annulation</string>
+    <string name="listing_des_items">Listing des items</string>
+    <string name="sauvgarder_liste">Sauvgarder Liste</string>
+</resources>

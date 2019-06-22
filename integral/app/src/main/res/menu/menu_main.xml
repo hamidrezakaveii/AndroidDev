@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.formation.integral.MainActivity">
+
+    <item
+    android:id="@+id/ajout_item"
+    android:orderInCategory="100"
+    android:title="@string/ajouter"
+    app:showAsAction="always" />
+
+    <item
+        android:id="@+id/affiche_list"
+        android:orderInCategory="200"
+        android:title="@string/listing_des_items"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/save_liste"
+        android:orderInCategory="300"
+        android:title="@string/sauvgarder_liste"
+        app:showAsAction="ifRoom" />
+</menu>

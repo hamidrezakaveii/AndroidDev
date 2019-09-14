@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.degenio.integra1.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="800"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ajout_item"
+        android:orderInCategory="100"
+        android:title="Ajouter item"
+        android:icon="@drawable/ic_action_new"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/save_liste"
+        android:orderInCategory="200"
+        android:title="Sauvegarder la liste"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/clear_liste"
+        android:orderInCategory="300"
+        android:title="Effacer le contenu de liste"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/delete_liste"
+        android:orderInCategory="400"
+        android:title="Supprimer la liste"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/share_liste"
+        android:orderInCategory="700"
+        android:title="Partager la liste"
+        app:showAsAction="never" />
+</menu>

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Intent intentGPS;
     private IntentFilter intentFilter;
     private BroadcastReceiver receiver;
-    double latitudev, longitudev;
+    //double latitudev, longitudev;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
+        //Set widgets
+        setWidgets();
+        setListener();
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("GPS");
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
         receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                 latitudev = intent.getDoubleExtra("latitude",0.0);
-                 longitudev = intent.getDoubleExtra("longitude",0.0);
+                 double latitudev = intent.getDoubleExtra("latitude",0.0);
+                 double longitudev = intent.getDoubleExtra("longitude",0.0);
                 latitude.setText(String.valueOf(latitudev));
                 longitude.setText(String.valueOf(longitudev));
             }
@@ -63,9 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         registerReceiver(receiver, intentFilter);
 
-        //Set widgets
-        setWidgets();
-        setListener();
+
 
 
 

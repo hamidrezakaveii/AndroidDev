@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.a2_servicegps">
+    package="com.example.a2_localisationwithgps">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -10,16 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".ServiceGPS"
+            android:name=".ServiceGPS2"
             android:enabled="true"
             android:exported="true"></service>
-        <service
-            android:name=".ServiceGPS2"
-            android:exported="false" />
-        <service
-            android:name=".MyService"
-            android:enabled="true"
-            android:exported="true" />
 
         <activity
             android:name=".MainActivity"

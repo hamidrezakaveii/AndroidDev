@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frgListing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ListActivity"
+    tools:showIn="@layout/activity_list"
+    android:orientation = "horizontal">
+
+    <LinearLayout
+        android:layout_width="715dp"
+        android:layout_height="347dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <fragment
+            android:id="@+id/frgliste"
+            android:name="com.example.a2_multifragment.ListeFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="75" />
+
+        <fragment
+            android:id="@+id/frgDetail"
+            android:name="com.example.a2_multifragment.DetailFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="25" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

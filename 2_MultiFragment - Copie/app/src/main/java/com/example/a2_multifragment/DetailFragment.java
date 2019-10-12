@@ -70,7 +70,7 @@ public class DetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_detail, container, false);
-        txtDetail = view.findViewById(R.id.txtDetail);
+        setWidget(view);
         optionDetails = getResources().getStringArray(R.array.optionsDetails);
 
 
@@ -81,6 +81,10 @@ public class DetailFragment extends Fragment {
 
         return view;
 
+    }
+
+    private void setWidget(View view) {
+        txtDetail = view.findViewById(R.id.txtDetail);
     }
 
 

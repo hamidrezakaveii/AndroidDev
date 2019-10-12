@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity implements DetailFragment.OnFragmentInteractionListener {
-    private TextView txtDetail;
-    String [] optionDetails;
+//    private TextView txtDetail;
+//    String [] optionDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,19 +30,19 @@ public class DetailActivity extends AppCompatActivity implements DetailFragment.
             }
         });
 
-        setWidget();
-        // Recouper le detail a partir de l<intent
-        Intent recu = getIntent();
-        int nomero = recu.getIntExtra("positionItem", 0);
-        txtDetail.setText(optionDetails[nomero]);
-        //setListener();
+//        setWidget();
+//        // Recouper le detail a partir de l<intent
+//        Intent recu = getIntent();
+//        int nomero = recu.getIntExtra("positionItem", 0);
+//        txtDetail.setText(optionDetails[nomero]);
+//        //setListener();
 
     }
 
-    private void setWidget() {
-        txtDetail = findViewById(R.id.txtDetail);
-        optionDetails = getResources().getStringArray(R.array.optionsDetails);
-    }
+//    private void setWidget() {
+//        txtDetail = findViewById(R.id.txtDetail);
+//        optionDetails = getResources().getStringArray(R.array.optionsDetails);
+//    }
 
     @Override
     public void onFragmentInteraction(Uri uri) {

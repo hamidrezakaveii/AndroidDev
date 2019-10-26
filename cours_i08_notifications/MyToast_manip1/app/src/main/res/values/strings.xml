@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Toast</string>
+    <string name="action_settings">Settings</string>
+    <string name="texte_important">Pour vous:details importants</string>
+</resources>

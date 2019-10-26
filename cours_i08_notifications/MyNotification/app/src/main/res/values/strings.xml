@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Notification</string>
+    <string name="action_settings">Settings</string>
+    <string name="activite_notification">activité ouverte à partir de la notification. Les détails se trouvent ici !!!</string>
+    <string name="titre_important">Détails de notification Builder</string>
+    <string name="texte_important">Builder-Cliquer ici pour les détails de la notification que vous venez de recevoir- Builder !</string>
+</resources>
